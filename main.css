@@ -31,3 +31,7 @@ header .container {
     align-items: center;
     justify-content: space-between;
 }
+
+.brands-list img {
+    height: 24px;
+}
