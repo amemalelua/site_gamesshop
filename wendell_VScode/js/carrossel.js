@@ -3,11 +3,11 @@ $(function(){
     var slideCount = $('.slide').length;
     var slideWidth = slideWidth * slideCount;
 
-    $('.slide').css('width', slideWidth);
+    $('.slider').css('width', slideWidth);
 
     function slide(){
-        $('.slider').animate({left: -slideWidth}, 200, function(){
-            $('slider .slider:first-child').appenTo('.slider');
+        $('.slider').animate({ left: -slideWidth}, 2000, function(){
+            $('slider .slider:first-child').appendTo('.slider');
             $('.slider').css('left', '');
             slide();
         });
