@@ -1,4 +1,5 @@
-$(function(){
+window.alert("Bem vindo ao Site")
+$(function() {
     var slideWidth = $('.slide').outerWidth();
     var slideCount = $('.slide').length;
     var slideWidth = slideWidth * slideCount;
