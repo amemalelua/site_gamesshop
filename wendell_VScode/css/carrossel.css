@@ -1,0 +1,47 @@
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translate3d(calc(-250px * 9));/*metade da quantidade de imagens*/
+    }
+}
+
+.carousel{
+    background-color: rgb(66, 44, 46);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.carousel::before,
+.carousel::after{
+    content: "";
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.carousel::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.carousel::before{
+    left: 0;
+    top: 0;
+}
+
+.carousel .slider{
+    animation: scroll 90s linear infinite;
+    display: flex;
+    width: calc(30% * 18);
+}
+
+.carousel .slide{
+    height: 200px;
+    width: 250px;
+    padding-left: 20px;
+}
